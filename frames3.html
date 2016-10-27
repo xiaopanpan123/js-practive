@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #con1{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div id="con1"></div>
+<script>
+    var con=document.getElementById('con1');
+    var count=0;
+    setInterval(function(){
+        con1.innerHTML=count++;
+        if(count==50){
+            window.parent.location.reload();
+        }
+    },100)
+</script>
+</body>
+</html>

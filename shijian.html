@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="pp">wibnhgaeurbgnabrgn</p>
+<input type="text"/>
+<!--<button id="btn" style="width: 100px; height: 100px; background-color: aqua;">按钮</button>-->
+<!--<button id="btn2" style="width: 100px; height: 100px; background-color: coral">按钮2</button>-->
+<script>
+    //
+    <!--var btn=document.getElementById("btn");-->
+    //
+    <!--var btn2=document.getElementById('btn2');-->
+    //    <!--btn.addEventListener('mouseover',mouseOverHandler);//attachEvent在谷歌浏览器使用-->
+    //
+    <!--var b=false;-->
+    //
+    <!--function mouseOverHandler(){-->
+    //
+    <!--if(!b){-->
+    //
+    <!--btn2.addEventListener('click',btnmouse);-->
+    //
+    <!--}else{-->
+    //
+    <!--btn2.removeEventListener('click',btnmouse);-->
+    //
+    <!--}-->
+    //
+    <!--b=!b;-->
+    //
+    <!--}-->
+    //
+    <!--function btnmouse(){-->
+    //
+    <!--console.log('我被移除了');-->
+    //
+    <!--}-->
+
+    document.addEventListener('keydown', function (e) {
+        console.log(e.keyCode);
+        console.log(e.key);
+        if (e.keyCode >= 65 && e.keyCode <= 96) {
+            if (e.key >= 'A' && e.key <= 'Z') {
+                e.preventDefault();
+            }
+        }
+    })
+//  document.oncontextmenu=function(e){
+//      e.preventDefault();
+//  }
+</script>
+</body>
+</html>

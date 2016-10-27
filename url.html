@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var result='';
+    function getEXT(URL){
+        var arr=URL.split('.');
+        var leixing=arr[arr.length-1];
+            result=leixing+'类型';
+            return result;
+    }
+    getEXT('https://img13.360buyimg.com/da/jfs/t3556/307/166907483/126581/a27673c0/58048827N950ee750.png');
+    console.log(result);
+
+</script>
+</body>
+</html>

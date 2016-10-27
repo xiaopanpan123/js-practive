@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #header {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: #FF6600;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<script>
+
+    document.addEventListener('keydown', an);
+    var div = document.getElementById('header');
+    var left=-150;
+    var wh = 300;
+    function an(e) {
+        console.log(e.keyCode);
+        console.log(e.key);
+        for(var i=0;i<=30;i++){
+            if(e.keyCode==39){
+                div.style.marginLeft=left+'px';
+                left++;
+
+            }else if(e.keyCode==40){
+                div.style.marginTop=left+'px';
+                left++;
+            }else if(e.keyCode==37){
+                div.style.marginLeft=left+'px';
+                left--;
+            }else if(e.keyCode==38){
+                div.style.marginTop=left+'px';
+                left--;
+            }
+        else if (e.keyCode == 38 && e.ctrlKey) {
+            div.style.width = wh+10+"px";
+            div.style.height = wh+10+"px";
+            wh++;
+        }
+        else if (e.keyCode == 40 && e.ctrlKey) {
+            div.style.width = wh-10+"px";
+            div.style.height = wh-10+"px";
+            wh--;
+
+        }
+        else if (e.keyCode == 39 && e.ctrlKey) {
+            var yanse='#'+(Math.random().toString(16)).substr(-6);
+            console.log(yanse);
+            div.style.backgroundColor=yanse;
+        }
+        else if (e.keyCode == 37 && e.ctrlKey) {
+            div.style.backgroundColor='blue'
+
+        }else{
+            div.style.backgroundColor='#FF6600'
+        }
+    }}
+
+
+</script>
+</body>
+</html>
